@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
-import type { FurbyStructure } from "../features/furbys/types.js";
+import mongoose, { Schema } from "mongoose";
+import type { FurbyStructure } from "../features/furbys/types";
 
 const furbySchema = new Schema<FurbyStructure>({
   name: {
@@ -16,4 +16,6 @@ const furbySchema = new Schema<FurbyStructure>({
   },
 });
 
-export default Schema;
+const Furby = mongoose.model("Furby", furbySchema, "furbys");
+
+export default Furby;
