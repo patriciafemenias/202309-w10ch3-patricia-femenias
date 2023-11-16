@@ -8,7 +8,7 @@ app.disable("x-powered-by");
 
 export const startServer = (port: number) => {
   app.listen(port, () => {
-    console.log(chalk.yellow`Listening on http://localhost:${port}`);
+    console.log(chalk.yellow(`Listening on http://localhost:${port}`));
   });
 };
 

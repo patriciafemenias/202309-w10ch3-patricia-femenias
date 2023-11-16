@@ -1,7 +1,7 @@
 import morgan from "morgan";
-import app from "./app";
-import pingRouter from "../features/ping/router/PingRouter";
 import express from "express";
+import app from "./app.js";
+import pingRouter from "../features/ping/router/PingRouter.js";
 
 app.use(express.json());
 app.use(morgan("dev"));

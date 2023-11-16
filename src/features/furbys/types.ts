@@ -1,5 +1,5 @@
 export interface FurbyStructure {
-  id: number;
+  id: string;
   name: string;
   year: number;
   type: string;
