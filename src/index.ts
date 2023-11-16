@@ -1,6 +1,5 @@
-import morgan from "morgan";
 import chalk from "chalk";
-import app, { startServer } from "./server/app.js";
+import { startServer } from "./server/app.js";
 import connectToDataBase from "./database/index.js";
 
 const port = process.env.PORT ?? 4000;
