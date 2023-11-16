@@ -4,6 +4,8 @@ import chalk from "chalk";
 
 const app = express();
 
+app.disable("x-powered-by");
+
 export const startServer = (port: number) => {
   app.listen(port, () => {
     console.log(chalk.yellow`Listening on http://localhost:${port}`);
