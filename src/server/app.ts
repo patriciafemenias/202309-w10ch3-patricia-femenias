@@ -4,7 +4,7 @@ import chalk from "chalk";
 
 const app = express();
 
-const port = process.env.PORT ?? 4000;
+app.disable("x-powered-by");
 
 export const startServer = (port: number) => {
   app.listen(port, () => {

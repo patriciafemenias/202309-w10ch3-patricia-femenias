@@ -8,7 +8,7 @@ beforeAll(() => {
 describe("Given a PingController's getPong method", () => {
   describe("When it receives a response", () => {
     const pingController = new PingController();
-    const mock = jest.fn().mockReturnValue({ json: jest.fn() });
+    const mock = jest.fn().mockReturnThis();
     const req = {};
     const mockResponse: Pick<Response, "status" | "json"> = {
       status: mock,
@@ -28,9 +28,7 @@ describe("Given a PingController's getPong method", () => {
 
       pingController.getPong(req as Request, mockResponse as Response);
 
-      expect(mockResponse.status(200).json).toHaveBeenCalledWith(
-        expectedMessage,
-      );
+      expect(mockResponse.json).toHaveBeenCalledWith(expectedMessage);
     });
   });
 });
