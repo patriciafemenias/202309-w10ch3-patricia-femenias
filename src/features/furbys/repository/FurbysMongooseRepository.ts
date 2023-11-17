@@ -8,5 +8,15 @@ class FurbysMongooseRepository implements FurbysRepository {
 
     return furbys;
   }
+
+  public async getFurbyById(furbyId: string): Promise<FurbyStructure> {
+    const furby = await Furby.findById(furbyId);
+
+    if (!furby) {
+      throw new Error("Imposible to find a Furby with this ID");
+    }
+
+    return furby;
+  }
 }
 export default FurbysMongooseRepository;
