@@ -7,5 +7,5 @@ import furbysRouter from "../features/furbys/router/furbysRouter.js";
 app.use(express.json());
 app.use(morgan("dev"));
 
+app.use("/furbyland", furbysRouter);
 app.use("/", pingRouter);
-app.use("/", furbysRouter);

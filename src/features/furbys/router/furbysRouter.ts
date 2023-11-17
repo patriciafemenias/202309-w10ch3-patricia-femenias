@@ -9,6 +9,8 @@ const furbysRepository: FurbysRepository = new FurbysMongooseRepository();
 
 const furbysController = new FurbysController(furbysRepository);
 
-furbysRouter.get("/furbyland", furbysController.getFurbys);
+furbysRouter.get("/", furbysController.getFurbys);
+
+furbysRouter.get("/:furbyId", furbysController.getFurbyById);
 
 export default furbysRouter;
